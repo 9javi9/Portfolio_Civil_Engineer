@@ -614,3 +614,20 @@ body:not(.user-is-tabbing) a:focus {
 .about__photo {
   width: 50%;
 }
+<style>
+.courses__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.courses__image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.courses__list {
+  margin: 15px 0;
+}
+</style>
