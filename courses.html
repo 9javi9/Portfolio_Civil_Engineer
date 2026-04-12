@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses & Learning</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+}
+
+.row {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.back-home {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECCIONES */
+.section {
+  margin: 60px 0;
+}
+
+/* COURSES */
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.course-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.course-card p {
+  opacity: 0.85;
+}
+
+.course-links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 6px 12px;
+  background: #00ffcc;
+  color: #111;
+  border-radius: 5px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.course-links a:hover {
+  background: #00ccaa;
+}
+
+/* NOTEBOOKS */
+.notebook-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.notebook-card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.notebook-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,200,0.2);
+}
+
+.notebook-card p {
+  opacity: 0.85;
+}
+
+.notebook-card ul {
+  padding-left: 20px;
+}
+
+.notebook-links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 6px 12px;
+  background: #00ffcc;
+  color: #111;
+  border-radius: 5px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.notebook-links a:hover {
+  background: #00ccaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .course-grid,
+  .notebook-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="row">
+
+  <a href="index.html" class="back-home">← Back to Home</a>
+
+  <h1>Courses & Applied Learning</h1>
+
+  <p style="text-align:center;">
+    Certified online courses and self-developed engineering notebooks 
+    integrating theory and computational implementation.
+  </p>
+
+  <!-- COURSES -->
+  <div class="section">
+    <h2>Courses & Certifications</h2>
+
+    <div class="course-grid">
+
+      <div class="course-card">
+        <h3>Machine Learning Specialization</h3>
+        <p>Supervised and unsupervised learning, evaluation and optimization.</p>
+        <div class="course-links">
+          <a href="https://coursera.org/verify/XXXXX" target="_blank">🎓 Certificate</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <h3>Deep Learning</h3>
+        <p>Neural networks, CNNs and computer vision.</p>
+        <div class="course-links">
+          <a href="https://coursera.org/verify/YYYYY" target="_blank">🎓 Certificate</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOTEBOOKS -->
+  <div class="section">
+    <h2>Engineering Notebooks</h2>
+
+    <div class="notebook-grid">
+
+      <div class="notebook-card">
+        <h3>Seismic Fragility Curves</h3>
+        <p>
+          Probabilistic modeling of fragility curves using structural simulations.
+        </p>
+
+        <ul>
+          <li>Python</li>
+          <li>Probabilistic methods</li>
+          <li>Seismic analysis</li>
+        </ul>
+
+        <div class="notebook-links">
+          <a href="https://github.com/tuusuario/fragility" target="_blank">💻 Code</a>
+          <a href="#" target="_blank">📓 Notebook</a>
+        </div>
+      </div>
+
+      <div class="notebook-card">
+        <h3>Urban Growth Detection</h3>
+        <p>
+          Detection of urban expansion using satellite imagery and deep learning.
+        </p>
+
+        <ul>
+          <li>Deep Learning</li>
+          <li>Remote sensing</li>
+          <li>Computer vision</li>
+        </ul>
+
+        <div class="notebook-links">
+          <a href="#" target="_blank">💻 Code</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
