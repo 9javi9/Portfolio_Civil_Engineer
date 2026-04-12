@@ -79,30 +79,81 @@
             </div>
 
             <div class="work__image-box">
-              <div id="plot-container" style="height:400px; display:flex; align-items:center; justify-content:center;">
-                <span>Loading interactive visualization...</span>
+              <div class="plot-wrapper" onclick="loadPlot(this)">
+                
+                <div class="overlay">
+                  <p class="title">Interactive 3D Visualization</p>
+                  <p class="subtitle">Click to explore</p>
+                  <div class="pulse"></div>
+                </div>
+            
               </div>
             </div>
             
+            <style>
+            .plot-wrapper {
+              position: relative;
+              height: 400px;
+              background: url('./preview.png') center/cover no-repeat; /* 👈 pon una imagen preview */
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            
+            .overlay {
+              text-align: center;
+              color: white;
+              backdrop-filter: blur(4px);
+            }
+            
+            .title {
+              font-size: 20px;
+              font-weight: bold;
+            }
+            
+            .subtitle {
+              font-size: 14px;
+              opacity: 0.8;
+            }
+            
+            /* 🔴 círculo pulsante */
+            .pulse {
+              margin: 15px auto;
+              width: 20px;
+              height: 20px;
+              background: red;
+              border-radius: 50%;
+              animation: pulse 1.5s infinite;
+            }
+            
+            @keyframes pulse {
+              0% {
+                transform: scale(1);
+                opacity: 1;
+              }
+              70% {
+                transform: scale(2);
+                opacity: 0;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+            </style>
+            
             <script>
-              const container = document.getElementById("plot-container");
-            
-              const observer = new IntersectionObserver(entries => {
-                if (entries[0].isIntersecting) {
-                  container.innerHTML = `
-                    <iframe 
-                      src="./Edificio1.html" 
-                      class="work__image"
-                      width="100%" 
-                      height="400px"
-                      style="border:none;">
-                    </iframe>
-                  `;
-                  observer.disconnect();
-                }
-              });
-            
-              observer.observe(container);
+            function loadPlot(el) {
+              el.innerHTML = `
+                <iframe 
+                  src="./Edificio1.html" 
+                  class="work__image"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+              `;
+            }
             </script>
           </div>
 
