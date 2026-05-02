@@ -35,6 +35,22 @@
     
       animation: pulseText 3s ease-in-out infinite;
     }
+
+  .footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  
+    background: #111;
+    color: #fff;
+    text-align: center;
+  
+    padding: 10px 0;
+    font-size: 14px;
+  
+    z-index: 1000;
+  }
     
     /* Animación continua suave */
     @keyframes pulseText {
@@ -316,7 +332,9 @@
 
     </div>
   </section>
-
+  <footer class="footer-fixed">
+    © 2026 Javier Jaimes — Civil Engineering
+  </footer>
   <!-- BOTÓN TOP -->
   <button id="topBtn" onclick="scrollToTop()">↑</button>
 
